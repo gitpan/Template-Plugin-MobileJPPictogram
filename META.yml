@@ -1,23 +1,32 @@
 ---
-abstract: 'Japanese mobile phone''s pictogram operator'
+abstract: "Japanese mobile phone's pictogram operator"
 author:
-  - 'Tokuhiro Matsuno <tokuhirom aaaatttt gmail dotottto commmmm>'
+  - 'Tokuhiro Matsuno E<lt>tokuhirom aaaatttt@ gmail dotottto commmmmE<gt>'
 build_requires:
-  Test::More: 0
-  YAML: 0
-distribution_type: module
-generated_by: 'Module::Install version 0.73'
+  Test::More: 0.98
+configure_requires:
+  Module::Build: 0.38
+dynamic_config: 0
+generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.112621'
 license: perl
 meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.3.html
-  version: 1.3
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
 name: Template-Plugin-MobileJPPictogram
 no_index:
   directory:
     - inc
     - t
+provides:
+  Template::Plugin::MobileJPPictogram:
+    file: lib/Template/Plugin/MobileJPPictogram.pm
+    version: 0.03
 requires:
   Encode::JP::Mobile: 0
   Encode::JP::Mobile::Charnames: 0
+  Filter::Util::Call: 0
   Template: 0
-version: 0.02
+  perl: 5.008008
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.03

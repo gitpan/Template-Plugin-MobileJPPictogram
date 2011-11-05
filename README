@@ -1,27 +1,41 @@
-This is Perl module Template::Plugin::MobileJPPictogram.
+NAME
+    Template::Plugin::MobileJPPictogram - Japanese mobile phone's pictogram
+    operator
 
-INSTALLATION
+SYNOPSIS
+      # controller
+      my $tt = Template->new;
+      $tt->process('foo.tt', {body => "\x{E001}"});
 
-Template::Plugin::MobileJPPictogram installation is straightforward. If your CPAN shell is set up,
-you should just be able to do
+      # foo.tt
+      [% USE MobileJPPictogram %]
+      [% body | pictogram_charname('***%s***') %]
+      [% body | pictogram_unicode('<img src="/img/pictogram/%X.gif" />') %]
 
-    % cpan Template::Plugin::MobileJPPictogram
+      # output
+      ***男の子***
+      <img src="/img/pictogram/E001.gif" />
 
-Download it, unpack it, then build it as per the usual:
+DESCRIPTION
+    Template::Plugin::MobileJPPictogram is Japanese mobile phone's pictogram
+    operator.
 
-    % perl Makefile.PL
-    % make && make test
+FILTERS
+  pictogram_charname
+    format with charnames.
 
-Then install it:
+        [% body | pictogram_charname('***%s***') %]
 
-    % make install
+  pictogram_unicode
+    format with Unicode.
 
-DOCUMENTATION
+        [% body | pictogram_unicode('<img src="/img/pictogram/%X.gif" />') %]
 
-Template::Plugin::MobileJPPictogram documentation is available as in POD. So you can do:
+AUTHOR
+    Tokuhiro Matsuno <tokuhirom aaaatttt@ gmail dotottto commmmm>
 
-    % perldoc Template::Plugin::MobileJPPictogram
+SEE ALSO
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
 
-to read the documentation online with your favorite pager.
-
-Tokuhiro Matsuno

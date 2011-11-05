@@ -2,7 +2,8 @@ package Template::Plugin::MobileJPPictogram;
 
 use strict;
 use warnings;
-our $VERSION = '0.02';
+use 5.0080008;
+our $VERSION = '0.03';
 
 require Template::Plugin;
 use base qw(Template::Plugin);
@@ -92,7 +93,7 @@ format with Unicode.
 
 =head1 AUTHOR
 
-Tokuhiro Matsuno E<lt>tokuhirom aaaatttt gmail dotottto commmmmE<gt>
+Tokuhiro Matsuno E<lt>tokuhirom aaaatttt@ gmail dotottto commmmmE<gt>
 
 =head1 SEE ALSO
 
