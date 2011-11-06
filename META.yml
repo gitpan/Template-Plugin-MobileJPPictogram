@@ -3,6 +3,7 @@ abstract: "Japanese mobile phone's pictogram operator"
 author:
   - 'Tokuhiro Matsuno E<lt>tokuhirom aaaatttt@ gmail dotottto commmmmE<gt>'
 build_requires:
+  Test::Base: 0
   Test::More: 0.98
 configure_requires:
   Module::Build: 0.38
@@ -20,7 +21,7 @@ no_index:
 provides:
   Template::Plugin::MobileJPPictogram:
     file: lib/Template/Plugin/MobileJPPictogram.pm
-    version: 0.03
+    version: 0.04
 requires:
   Encode::JP::Mobile: 0
   Encode::JP::Mobile::Charnames: 0
@@ -29,4 +30,4 @@ requires:
   perl: 5.008008
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.03
+version: 0.04

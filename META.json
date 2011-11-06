@@ -22,6 +22,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
+            "Test::Base" : 0,
             "Test::More" : "0.98"
          }
       },
@@ -43,7 +44,7 @@
    "provides" : {
       "Template::Plugin::MobileJPPictogram" : {
          "file" : "lib/Template/Plugin/MobileJPPictogram.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       }
    },
    "release_status" : "stable",
@@ -52,5 +53,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }
