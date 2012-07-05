@@ -33,8 +33,8 @@ my @tests = (
 );
 
 plan tests => 0+@tests;
-for (@tests) {
-    is(escape($_->{input}), $_->{expected}, $_->{expected});
+for my $t (@tests) {
+    is(escape($t->{input}), $t->{expected}, $t->{expected});
 }
 
 sub decode_uni {

@@ -1,5 +1,9 @@
 Revision history for Perl extension Template::Plugin::MobileJPPictogram
 
+0.06
+
+    - fixed testing issue
+
 0.05
 
     - no Test::Base;
